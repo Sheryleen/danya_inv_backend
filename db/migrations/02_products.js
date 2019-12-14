@@ -6,6 +6,10 @@ exports.up = function(knex, Promise) {
     table.string("description").notNullable();
     table.string("cost").notNullable();
     table.string("quantity").notNullable;
+    table
+      .integer("category_id")
+      .references("id")
+      .inTable("category");
     table.timestamps(true, true);
   });
 };
