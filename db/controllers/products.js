@@ -24,6 +24,7 @@ exports.addOneProduct = (req, res) => {
 };
 
 exports.updateOneProduct = (req, res) => {
+  console.log("req.body", req.body);
   knex("products")
     .update({
       ...req.body, //all column data in row
